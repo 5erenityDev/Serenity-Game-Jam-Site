@@ -1,0 +1,45 @@
+body {
+  background-color: #141826;
+}
+
+.container {
+  margin: auto;
+  max-width: 1200px;
+  font-family: monospace;
+  font-size: 30px;
+  background-color: #141826; 
+  color: #90caf9;
+}
+
+.heading {
+  color: #709CD3; 
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  margin: 5rem 0;
+  justify-content: space-between;
+}
+
+.nav-link-item {
+  
+}
+/* Styling for the links themselves */
+.nav-link-text {
+  color: #90caf9;
+  text-decoration: none;   
+  font-size: 40px;
+  padding: 10px 20px;
+  background-color: #20273c;
+  border-radius: 5px;
+}
+
+.site-title {
+  font-size: 5rem;
+  color: #b3e5fc;  /* Adjust color if desired */
+  font-weight: 700;
+  margin: 3rem 0; /* You can remove these margins if needed */
+  text-align: center; /* Can be removed if using flexbox centering */
+}

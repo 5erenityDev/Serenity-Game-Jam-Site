@@ -1,9 +1,23 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+jamsPath = __dirname + '/jams';
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://www.yourdomain.tld`,
+    title: "Serenity Jam",
+    author: "Sean Blankenship"
   },
-  plugins: [],
-}
+  plugins: [
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: 'jams',
+        path: jamsPath,
+      },
+    },
+    "gatsby-plugin-mdx",
+    "gatsby-transformer-sharp",
+  ],
+};
