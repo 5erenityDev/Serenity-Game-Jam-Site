@@ -4,8 +4,8 @@ import Seo from '../components/seo';
 import Countdown from 'react-countdown'; 
 
 const CountdownPage = () => {
-    const targetDate = new Date(2027, 6, 10).getTime(); 
-
+    const targetDate = new Date(2027, 6, 10); 
+    const targetTime = targetDate.getTime()
     const today = new Date();
     const formattedToday = today.toLocaleDateString('en-US', {
         year: 'numeric',
@@ -47,7 +47,7 @@ const CountdownPage = () => {
 
   return (
     <Layout pageTitle="Countdown to the next jam!">
-      <Countdown date={targetDate} renderer={renderer} /> 
+      <Countdown date={targetTime} renderer={renderer} /> 
     </Layout>
   );
 };
