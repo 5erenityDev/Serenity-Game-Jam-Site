@@ -4,7 +4,7 @@ import Seo from '../components/seo';
 import Countdown from 'react-countdown'; 
 
 const CountdownPage = () => {
-    const targetDate = new Date(2024, 5, 1).getTime(); 
+    const targetDate = new Date(2027, 6, 10).getTime(); 
 
     const today = new Date();
     const formattedToday = today.toLocaleDateString('en-US', {
@@ -12,7 +12,11 @@ const CountdownPage = () => {
         month: 'long',
         day: 'numeric'
     });
-
+    const formattedTarget = targetDate.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+  });
     const renderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {
         return <span>The game jam has started!</span>;
@@ -22,7 +26,7 @@ const CountdownPage = () => {
         <>
           <div className="date-container">
             <p>Today's Date: {formattedToday}</p>
-            <p>Game Jam Date: June 1, 2024</p>
+            <p>Game Jam Date: {formattedTarget}</p>
           </div>
           <div className="countdown-item">
             {days} <span>Days</span>
