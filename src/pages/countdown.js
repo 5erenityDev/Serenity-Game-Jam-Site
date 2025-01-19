@@ -4,7 +4,7 @@ import Seo from '../components/seo';
 import Countdown from 'react-countdown'; 
 
 const CountdownPage = () => {
-    const targetDate = new Date(2024, 5, 1).getTime(); 
+    const targetDate = new Date(2027, 6, 10).getTime(); 
 
     const today = new Date();
     const formattedToday = today.toLocaleDateString('en-US', {
